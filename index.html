@@ -9,17 +9,13 @@
 </head>
 <body>
   <div class="container">
-    <ul id="clock_menu">
-      <li class="menu_btn">시계</li>
-      <li>스톱워치</li>
-    </ul>
-    <h2 class="clock">00:00:00</h2>
-    <form id="btn">
-      <input type="button" value="시작">
-      <input type="button" value="정지">
-    </form>
+    <h2>스톱 워치</h2>
+    <h1>
+      <span id="minutes">00</span><span>:</span><span id="seconds">00</span><span>:</span><span id="tenMillis">00</span>
+    </h1>
+    <button class="start_btn">시작</button>
+    <button class="stop_btn">정지</button>
   </div>
-  <script src="js/menuBtn.js"></script>
-  <script src="js/clock.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
