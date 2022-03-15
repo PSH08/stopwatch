@@ -2,39 +2,35 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  box-sizing: border-box;
 }
 .container {
-  width: 200px;
+  text-align: center;
+  background: rgb(117, 117, 117);
+  width: 30%;
   margin: 0 auto;
+  border: 5px solid black;
+  border-radius: 10px;
 }
-#clock_menu {
-  background: #f2f2f2;
-  display: flex;
-  height: 100%;
-  border-radius: 10px 10px 0 0;
-  border: 1px solid black;
-  border-bottom: 0px;
+h2 {
+  color: #fff;
 }
-#clock_menu li {
-  text-align: center;
-  width: 50%;
-  border-left: 1px solid black;
+h1 {
+  color: rgb(202, 255, 128);
 }
-#clock_menu li:first-child {
-  border-left: 0;
+h1 span {
+  display: inline-block;
+  width: 30px;
 }
-#clock {
-  text-align: center;
-  font-size: 24px;
-  padding: 5px;
-  background: rgb(48, 48, 48) ;
-  color: rgb(220, 255, 167);
+button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  padding: 1px 0 0 1px;
+  cursor: pointer;
 }
-#btn {
-  width: 100%;
-  /* display: none; */
-  display: flex;
-}
-#btn input {
-  width: 50%;
+button:active {
+  color: #fff;
+  background-color: #000;
 }
