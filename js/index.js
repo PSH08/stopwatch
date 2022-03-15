@@ -1,11 +1,16 @@
 let minutes = 0;
 let seconds = 0;
 let tenMillis = 0;
+let ul = document.createElement('ul');
+let li = document.createElement('li');
 const ten = document.getElementById('tenMillis');
 const sec = document.getElementById('seconds');
 const min = document.getElementById('minutes');
 const start_btn = document.querySelector('.start_btn');
 const stop_btn = document.querySelector('.stop_btn');
+const save_btn = document.querySelector('.save_btn');
+const reset_btn = document.querySelector('.reset_btn');
+const cont = document.querySelector('.container');
 let time;
 
 start_btn.addEventListener('click', function() {
@@ -30,4 +35,18 @@ function start() {
 
 stop_btn.addEventListener('click', function() {
   clearInterval(time)
-})
+});
+
+save_btn.addEventListener('click', function() {
+  cont.appendChild(ul);
+  ul.appendChild(li);
+  li.innerText = `${minutes}:${seconds}:${tenMillis}`;
+});
+
+function reset() {
+  li.innerText = ''
+  if(tenMillis > 1) {
+    ten.nodeValue = ''
+  }
+}
+reset_btn.addEventListener('click', reset)
