@@ -2,7 +2,6 @@ let minutes = 0;
 let seconds = 0;
 let tenMillis = 0;
 let ul = document.createElement('ul');
-let li = document.createElement('li');
 const ten = document.getElementById('tenMillis');
 const sec = document.getElementById('seconds');
 const min = document.getElementById('minutes');
@@ -14,6 +13,7 @@ const cont = document.querySelector('.container');
 let time;
 
 start_btn.addEventListener('click', function() {
+  clearInterval(time)
   time = setInterval(start, 10);
 })
 function start() {
@@ -38,15 +38,20 @@ stop_btn.addEventListener('click', function() {
 });
 
 save_btn.addEventListener('click', function() {
+  let li = document.createElement('li');
   cont.appendChild(ul);
   ul.appendChild(li);
   li.innerText = `${minutes}:${seconds}:${tenMillis}`;
 });
 
 function reset() {
-  li.innerText = ''
-  if(tenMillis > 1) {
-    ten.nodeValue = ''
-  }
+  clearInterval(time)
+  ul.innerText = ''
+  tenMillis = 0;
+  seconds = 0;
+  minutes = 0;
+  ten.innerText = '00'
+  sec.innerText = '00'
+  min.innerText = '00'
 }
 reset_btn.addEventListener('click', reset)
